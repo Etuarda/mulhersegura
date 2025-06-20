@@ -121,6 +121,36 @@ h1 {
     font-size: 0.7rem;
 }
 
+/* RESPONSIVIDADE DO FOOTER */
+@media (max-width: 480px) {
+    .navegacao-interna {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        border-radius: 12px 12px 0 0;
+        justify-content: space-between;
+        padding: 0.6rem 0.8rem;
+        z-index: 999;
+    }
+
+    .container {
+        padding-bottom: 5rem;
+        /* Espaço para o footer não sobrepor conteúdo */
+    }
+
+    .botoes-flutuantes {
+        bottom: 5.5rem;
+        /* acima do footer fixo */
+    }
+
+    .mensagem-acao-fixa {
+        bottom: 9.5rem;
+    }
+}
+
 /* BOTÕES FLUTUANTES */
 .botoes-flutuantes {
     position: fixed;
