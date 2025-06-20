@@ -1,0 +1,6 @@
+@import url('./global.css');
+
+/* Personalização leve se quiser */
+#form-perfil select {
+    background-color: white;
+}

@@ -18,3 +18,23 @@ function acionarEmergencia() {
 function iniciarGravacao() {
     document.getElementById("mensagem-acao").innerText = "🎙️ Gravação de provas iniciada...";
 }
+// Escuta a tecla pressionada
+document.addEventListener("keydown", function (event) {
+    // Verifica se a tecla pressionada foi "Volume Up" (simulado por '+')
+    if (event.key === "+" || event.key === "=") {
+        simularGravacao();
+    }
+});
+
+function simularGravacao() {
+    const provas = JSON.parse(localStorage.getItem("provas")) || [];
+    const dataHora = new Date().toLocaleString("pt-BR");
+    const novaProva = {
+        titulo: `Gravação simulada - ${dataHora}`
+    };
+
+    provas.push(novaProva);
+    localStorage.setItem("provas", JSON.stringify(provas));
+
+    alert("🚨 Gravação iniciada! Prova salva com sucesso.");
+}

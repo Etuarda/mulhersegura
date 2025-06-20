@@ -129,7 +129,7 @@ button:hover {
 }
 
 .sugestoes button {
-    background-color: var(--rosa-claro);
+    background-color: #999;
     border: none;
     border-radius: 8px;
     padding: 0.6rem 1rem;
