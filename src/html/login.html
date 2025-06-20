@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - App Seguro</title>
+    <link rel="stylesheet" href="../css/cadastro.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Bem-vinda</h1>
+
+        <form id="form-login" novalidate aria-describedby="mensagem-erro">
+            <fieldset>
+                <legend>Login</legend>
+
+                <label for="usuario">Usuário ou E-mail</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Digite seu usuário ou e-mail" />
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha" />
+
+                <div style="margin-top: 1rem;">
+                    <input type="checkbox" id="ver-senha" />
+                    <label for="ver-senha">Mostrar senha</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" aria-label="Entrar no sistema">Entrar</button>
+            <p class="mensagem-erro" id="mensagem-erro" aria-live="assertive"></p>
+
+            <p style="text-align:center; margin-top:1rem;">
+                <a href="cadastro.html"> Cadastre-se aqui</a>
+            </p>
+        </form>
+    </main>
+
+    <script>
+        const form = document.getElementById("form-login");
+        const erro = document.getElementById("mensagem-erro");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            erro.textContent = "";
+
+            const usuarioInput = document.getElementById("usuario").value.trim();
+            const senhaInput = document.getElementById("senha").value;
+
+            if (!usuarioInput || !senhaInput) {
+                erro.textContent = "Preencha todos os campos para continuar.";
+                return;
+            }
+
+            // Recupera dados do localStorage
+            const dadosSalvos = JSON.parse(localStorage.getItem("usuarioAppSeguro"));
+
+            if (!dadosSalvos) {
+                erro.textContent = "Nenhum usuário cadastrado.";
+                return;
+            }
+
+            const usuarioMatch =
+                usuarioInput === dadosSalvos.usuario || usuarioInput === dadosSalvos.email;
+            const senhaMatch = senhaInput === dadosSalvos.senha;
+
+            if (!usuarioMatch || !senhaMatch) {
+                erro.textContent = "Usuário ou senha inválidos.";
+                return;
+            }
+
+            // Login OK
+            window.location.href = "home.html";
+        });
+
+        // Mostrar/ocultar senha
+        document.getElementById("ver-senha").addEventListener("change", function () {
+            const tipo = this.checked ? "text" : "password";
+            document.getElementById("senha").type = tipo;
+        });
+    </script>
+</body>
+
+</html>

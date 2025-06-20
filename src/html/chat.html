@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversa Segura - App Seguro</title>
+    <link rel="stylesheet" href="../css/chat.css" />
+</head>
+
+<body>
+    <main class="chat-container">
+        <header class="chat-header">
+            <h1>Conversa Segura</h1>
+        </header>
+
+        <!-- Botão de voltar para a home -->
+        <button onclick="voltarParaHome()" aria-label="Voltar para tela inicial">Voltar para a Home</button>
+
+        <section class="chat-box" id="chat-box" aria-live="polite">
+            <div class="mensagem-sistema">Olá! Como posso te ajudar hoje?</div>
+        </section>
+
+        <section class="chat-input">
+            <input type="text" id="entrada-msg" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem" />
+            <button onclick="enviarMensagem()" aria-label="Enviar mensagem">➤</button>
+        </section>
+
+        <section class="sugestoes">
+            <button onclick="sugerirMensagem('Preciso de apoio emocional.')">💬 Apoio emocional</button>
+            <button onclick="sugerirMensagem('Como denunciar uma ameaça?')">💬 Denúncia</button>
+            <button onclick="sugerirMensagem('Quais meus direitos?')">💬 Direitos</button>
+        </section>
+    </main>
+
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

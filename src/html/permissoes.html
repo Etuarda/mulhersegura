@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos e Permissões</title>
+    <link rel="stylesheet" href="../css/cadastro.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Termos de Uso e Permissões</h1>
+
+        <form id="form-termos" novalidate aria-describedby="mensagem-erro">
+            <!-- Termos de Uso -->
+            <fieldset>
+                <legend>Termos de Uso</legend>
+                <p>Este app foi desenvolvido com o objetivo de oferecer segurança e acolhimento para mulheres em
+                    situações de risco no trajeto e ambiente de trabalho.</p>
+                <ul>
+                    <li>Seus dados são armazenados apenas localmente e utilizados exclusivamente para sua proteção.</li>
+                    <li>Você pode excluir suas informações a qualquer momento.</li>
+                    <li>Este app é sigiloso, se disfarça automaticamente e respeita sua privacidade.</li>
+                    <li>Não substituímos órgãos oficiais de denúncia, mas oferecemos apoio emocional e coleta de provas.
+                    </li>
+                </ul>
+            </fieldset>
+
+            <!-- Permissões -->
+            <fieldset>
+                <legend>Permissões Necessárias</legend>
+                <p>Para que possamos te proteger com eficiência, precisamos de acesso a:</p>
+
+                <label>
+                    <input type="checkbox" id="perm-loc" required />
+                    Localização em tempo real para rotas seguras e envio de alertas
+                </label>
+
+                <label>
+                    <input type="checkbox" id="perm-mic" required />
+                    Microfone para gravação discreta de provas em situações de emergência
+                </label>
+
+                <label>
+                    <input type="checkbox" id="perm-not" required />
+                    Notificações para alertas de risco e lembretes sobre trajeto
+                </label>
+
+                <label class="termos">
+                    <input type="checkbox" id="perm-termos" required />
+                    Li e concordo com os termos de uso e as permissões acima
+                </label>
+            </fieldset>
+
+            <!-- Ação -->
+            <button type="submit" aria-label="Aceitar termos e ir para login">Aceitar e continuar</button>
+            <p class="mensagem-erro" id="mensagem-erro" aria-live="assertive"></p>
+        </form>
+    </main>
+
+    <script>
+        const form = document.getElementById("form-termos");
+        const erro = document.getElementById("mensagem-erro");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            erro.textContent = "";
+
+            const checkboxes = [
+                document.getElementById("perm-loc"),
+                document.getElementById("perm-mic"),
+                document.getElementById("perm-not"),
+                document.getElementById("perm-termos")
+            ];
+
+            const todosMarcados = checkboxes.every(cb => cb.checked);
+
+            if (!todosMarcados) {
+                erro.textContent = "Por favor, aceite todos os termos e permissões para continuar com segurança.";
+                return;
+            }
+
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - App Seguro</title>
+    <link rel="stylesheet" href="../css/cadastro.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Crie sua conta</h1>
+
+        <form id="form-cadastro" novalidate aria-describedby="mensagem-erro">
+            <!-- Grupo: Dados Pessoais -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Ex: Juliana" />
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(89)9 9999-9999" maxlength="11" />
+
+                <label for="usuario">Nome de usuário</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="juliana28" />
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required minlength="6"
+                    aria-describedby="mensagem-erro" />
+
+                <label for="confirmar">Confirmar senha</label>
+                <input type="password" id="confirmar" name="confirmar" required minlength="6" />
+
+                <div style="margin-top: 1rem;">
+                    <input type="checkbox" id="ver-senha" />
+                    <label for="ver-senha">Mostrar senha</label>
+                </div>
+            </fieldset>
+
+            <!-- Grupo: Rede de Apoio -->
+            <fieldset>
+                <legend>Rede de Apoio</legend>
+
+                <label for="apoio-nome">Nome do contato</label>
+                <input type="text" id="apoio-nome" name="apoio-nome" required placeholder="Ex: Ana Paula" />
+
+                <label for="apoio-telefone">Telefone do contato</label>
+                <input type="tel" id="apoio-telefone" name="apoio-telefone" required placeholder="(89)9 9999-9999"
+                    maxlength="11" />
+
+                <label for="apoio-relacao">Relação</label>
+                <select id="apoio-relacao" name="apoio-relacao" required>
+                    <option value="">Selecione...</option>
+                    <option value="Amiga">Amiga</option>
+                    <option value="Irmã">Irmã</option>
+                    <option value="Mãe">Mãe</option>
+                    <option value="ONG">ONG</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </fieldset>
+
+            <!-- Ações -->
+            <button type="submit" aria-label="Cadastrar nova conta com dados preenchidos">Cadastrar</button>
+            <p class="mensagem-erro" id="mensagem-erro" aria-live="assertive"></p>
+        </form>
+    </main>
+
+    <script src="../js/cadastro.js"></script>
+</body>
+
+</html>

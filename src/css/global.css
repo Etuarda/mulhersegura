@@ -1,0 +1,38 @@
+/* Variáveis de cores e estilo base */
+:root {
+    --rosa-base: #FADADD;
+    --rosa-claro: #FFC0CB;
+    --rosa-hover: #E59AB2;
+    --branco-suave: #FFF5F8;
+    --preto: #333;
+    --cinza: #D9D9D9;
+}
+
+/* Reset e padrão geral */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--rosa-base);
+    color: var(--preto);
+    padding: 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container padrão para páginas */
+.container {
+    background: var(--branco-suave);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

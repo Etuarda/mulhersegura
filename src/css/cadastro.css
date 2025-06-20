@@ -1,0 +1,132 @@
+/* 🌸 Paleta de Cores Calmantes */
+:root {
+    --rosa-base: #FADADD;
+    --rosa-claro: #FFC0CB;
+    --rosa-hover: #E59AB2;
+    --branco-suave: #FFF5F8;
+    --preto: #333;
+    --cinza: #D9D9D9;
+}
+
+/* Garantir box-sizing global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--rosa-base);
+    color: var(--preto);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--branco-suave);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--preto);
+}
+
+/* 🔷 Agrupamento com fieldset */
+fieldset {
+    border: 1px solid var(--rosa-claro);
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem 1.2rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--rosa-hover);
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Inputs e selects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.4rem;
+    border: 1px solid var(--cinza);
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1rem;
+    transition: border 0.2s ease;
+}
+
+/* Foco visível */
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid var(--rosa-hover);
+    outline-offset: 2px;
+    border-color: var(--rosa-hover);
+}
+
+/* Termos de uso */
+.termos {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.termos a {
+    margin-left: 0.3rem;
+    color: var(--rosa-hover);
+    text-decoration: underline;
+}
+
+/* Botão */
+button {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    width: 100%;
+    background-color: var(--rosa-claro);
+    color: var(--preto);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--rosa-hover);
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+    color: crimson;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    text-align: center;
+}

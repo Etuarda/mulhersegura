@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início - App Seguro</title>
+    <link rel="stylesheet" href="../css/home.css" />
+</head>
+
+<body>
+    <main class="container">
+
+        <!-- Saudação -->
+        <h1>Bem-vinda, <span id="nome-usuario"></span>!</h1>
+
+        <!-- Funcionalidades principais -->
+        <fieldset>
+            <div class="card roxo" role="button" tabindex="0" onclick="navegarPara('provas.html')">
+                <img src="../../assets/img/seguranca.png" alt="Ícone de Segurança Agora" />
+                <p>Segurança Agora</p>
+            </div>
+
+            <div class="card rosa" role="button" tabindex="0" onclick="navegarPara('chat.html')">
+                <img src="../../assets/img/conversa.png" alt="Ícone de Conversa Segura" />
+                <p>Conversa Segura</p>
+            </div>
+
+            <div class="card verde" role="button" tabindex="0" onclick="navegarPara('rotas.html')">
+                <img src="../../assets/img/rota.png" alt="Ícone de Rotas Seguras" />
+                <p>Rotas Seguras</p>
+            </div>
+        </fieldset>
+
+        <!-- Navegação inferior -->
+        <nav class="navegacao-interna" aria-label="Menu inferior">
+            <button onclick="navegarPara('provas.html')" aria-label="Segurança Agora">
+                <img src="../../assets/img/seguranca.png" alt="Provas" />
+                <span>Provas</span>
+            </button>
+            <button onclick="navegarPara('chat.html')" aria-label="Conversa Segura">
+                <img src="../../assets/img/conversa.png" alt="Chat" />
+                <span>Chat</span>
+            </button>
+            <button onclick="navegarPara('rotas.html')" aria-label="Rotas Seguras">
+                <img src="../../assets/img/rota.png" alt="Rotas" />
+                <span>Rotas</span>
+            </button>
+            <button onclick="navegarPara('calculadora.html')" aria-label="Modo Disfarçado">
+                <img src="../../assets/img/fantasma.png" alt="Disfarce" />
+                <span>Disfarce</span>
+            </button>
+            <button onclick="navegarPara('perfil.html')" aria-label="Perfil da usuária">
+                <img src="../../assets/img/perfil.png" alt="Perfil" />
+                <span>Perfil</span>
+            </button>
+        </nav>
+    </main>
+
+    <!-- Botões fixos (volume + / volume -) -->
+    <div class="botoes-flutuantes" aria-label="Botões de emergência e gravação">
+        <button onclick="acionarEmergencia()" aria-label="Volume + - Acionar ajuda">🔊</button>
+        <button onclick="iniciarGravacao()" aria-label="Volume - - Iniciar gravação">🔉</button>
+    </div>
+
+    <!-- Mensagem MVP2 -->
+    <p id="mensagem-acao" aria-live="polite" class="mensagem-acao-fixa"></p>
+
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

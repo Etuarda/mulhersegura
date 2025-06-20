@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotas Seguras - App Seguro</title>
+    <link rel="stylesheet" href="../css/rotas.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Rotas Seguras</h1>
+
+        <!-- Status dinâmico -->
+        <section aria-labelledby="status-rota" aria-live="polite">
+            <p id="status-rota">Verificando sua rota atual...</p>
+        </section>
+
+        <!-- Simulação de mapa -->
+        <section id="mapa" aria-label="Mapa de rota simulada">
+            <p>📍 Você está aqui</p>
+            <img src="../../assets/img/rota.png" alt="Ícone de Rotas Seguras" />
+        </section>
+
+        <!-- Locais de apoio -->
+        <fieldset>
+            <legend>Locais de apoio próximos</legend>
+            <ul>
+                <li>🛡️ Delegacia da Mulher - 2 km</li>
+                <li>🫂 ONG Casa Segura - 1.5 km</li>
+                <li>📱 Contato de Confiança: Ana (online)</li>
+            </ul>
+        </fieldset>
+
+        <!-- Botões -->
+        <button onclick="verRotaMaisSegura()" aria-label="Exibir sugestão de rota mais segura">Ver Rota Mais
+            Segura</button>
+        <button onclick="voltarParaHome()" aria-label="Voltar para tela inicial">Voltar para a Home</button>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const status = document.getElementById("status-rota");
+            const hora = new Date().getHours();
+
+            if (hora >= 20 || hora < 6) {
+                status.textContent = "⚠️ Alerta: horário noturno. Recomenda-se evitar ruas desertas.";
+            } else {
+                status.textContent = "✅ Horário seguro. Priorize avenidas iluminadas e movimentadas.";
+            }
+        });
+
+        function verRotaMaisSegura() {
+            alert("Rota mais segura: siga pela Avenida Principal, evite ruas secundárias. A ONG Casa Segura está a 1.5 km.");
+        }
+
+        function voltarParaHome() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+
+</html>
