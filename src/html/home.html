@@ -11,29 +11,32 @@
 <body>
     <main class="container">
 
-        <!-- Saudação -->
+        <!-- Saudação personalizada -->
         <h1>Bem-vinda, <span id="nome-usuario"></span>!</h1>
 
-        <!-- Funcionalidades principais -->
-        <fieldset>
+        <!-- Cards principais das funcionalidades -->
+        <fieldset aria-label="Funcionalidades principais">
+            <!-- Card de Segurança Agora -->
             <div class="card roxo" role="button" tabindex="0" onclick="navegarPara('provas.html')">
                 <img src="../../assets/img/seguranca.png" alt="Ícone de Segurança Agora" />
                 <p>Segurança Agora</p>
             </div>
 
+            <!-- Card de Conversa com IA -->
             <div class="card rosa" role="button" tabindex="0" onclick="navegarPara('chat.html')">
                 <img src="../../assets/img/conversa.png" alt="Ícone de Conversa Segura" />
                 <p>Conversa Segura</p>
             </div>
 
+            <!-- Card de Rotas Seguras -->
             <div class="card verde" role="button" tabindex="0" onclick="navegarPara('rotas.html')">
                 <img src="../../assets/img/rota.png" alt="Ícone de Rotas Seguras" />
                 <p>Rotas Seguras</p>
             </div>
         </fieldset>
 
-        <!-- Navegação inferior -->
-        <nav class="navegacao-interna" aria-label="Menu inferior">
+        <!-- Menu de navegação inferior -->
+        <nav class="navegacao-interna" aria-label="Menu de navegação inferior">
             <button onclick="navegarPara('provas.html')" aria-label="Segurança Agora">
                 <img src="../../assets/img/seguranca.png" alt="Provas" />
                 <span>Provas</span>
@@ -46,7 +49,7 @@
                 <img src="../../assets/img/rota.png" alt="Rotas" />
                 <span>Rotas</span>
             </button>
-            <button onclick="navegarPara('calculadora.html')" aria-label="Modo Disfarçado">
+            <button onclick="navegarPara('calculadora.html')" aria-label="Modo Disfarçado (calculadora)">
                 <img src="../../assets/img/fantasma.png" alt="Disfarce" />
                 <span>Disfarce</span>
             </button>
@@ -57,16 +60,47 @@
         </nav>
     </main>
 
-    <!-- Botões fixos (volume + / volume -) -->
-    <div class="botoes-flutuantes" aria-label="Botões de emergência e gravação">
-        <button onclick="acionarEmergencia()" aria-label="Volume + - Acionar ajuda">🔊</button>
-        <button onclick="iniciarGravacao()" aria-label="Volume - - Iniciar gravação">🔉</button>
+
+    <!-- Botões flutuantes (atalhos simulados de emergência) -->
+    <div class="botoes-flutuantes" aria-label="Atalhos de demonstração">
+        <button onclick="acionarEmergencia()">
+            🔊
+            <span class="descricao-visivel-vlibras">Acionar ajuda (botão simulado)</span>
+        </button>
+        <button onclick="iniciarGravacao()">
+            🔉
+            <span class="descricao-visivel-vlibras">Iniciar gravação (botão simulado)</span>
+        </button>
     </div>
 
-    <!-- Mensagem MVP2 -->
-    <p id="mensagem-acao" aria-live="polite" class="mensagem-acao-fixa"></p>
 
+    <!-- Mensagem de feedback visível e acessível -->
+    <p id="mensagem-acao" class="mensagem-acao-fixa" aria-live="polite" tabindex="-1"></p>
+
+    <!-- Script principal da página -->
     <script src="../js/home.js"></script>
+
+    <!-- VLibras: plugin de acessibilidade em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- VLibras: script oficial -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
+
+<!-- Script principal da home -->
+<script src="../js/home.js"></script>
+
+
 </body>
 
 </html>
