@@ -1,30 +1,38 @@
 const tela = document.getElementById("tela");
 
+function atualizarTela(texto) {
+    tela.textContent = texto || "0";
+    tela.setAttribute(
+        "aria-label",
+        `Tela da calculadora. Cálculo atual: ${tela.textContent}. Dê dois toques rápidos para voltar ao login.`
+    );
+}
+
 function inserir(valor) {
-    tela.value += valor;
+    if (tela.textContent === "0") tela.textContent = "";
+    atualizarTela(tela.textContent + valor);
 }
 
 function limpar() {
-    tela.value = "";
+    atualizarTela("");
 }
 
 function apagar() {
-    tela.value = tela.value.slice(0, -1);
+    atualizarTela(tela.textContent.slice(0, -1));
 }
 
 function calcular() {
     try {
-        tela.value = eval(tela.value);
+        const resultado = eval(tela.textContent);
+        atualizarTela(resultado.toString());
     } catch {
-        tela.value = "Erro";
+        atualizarTela("Erro");
     }
 }
 
-// Verificação ao dar duplo clique no visor
-tela.addEventListener("dblclick", () => {
+function verificarRedirecionamento() {
     const usuarioLogado = localStorage.getItem("usuarioLogado") === "true";
     const timestampLogin = Number(localStorage.getItem("timestampLogin"));
-
     const agora = Date.now();
     const DUAS_HORAS = 2 * 60 * 60 * 1000;
 
@@ -33,4 +41,4 @@ tela.addEventListener("dblclick", () => {
     } else {
         window.location.href = "login.html";
     }
-});
+}

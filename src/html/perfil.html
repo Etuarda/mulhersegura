@@ -2,45 +2,54 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Define a codificação de caracteres e responsividade -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da aba -->
     <title>Perfil do Usuário - App Seguro</title>
+
+    <!-- Estilos globais e específicos da página -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/perfil.css" />
 </head>
 
 <body>
+    <!-- Container principal do conteúdo -->
     <main class="container">
         <h1>Meu Perfil</h1>
 
+        <!-- Formulário de perfil da usuária -->
         <form id="form-perfil" novalidate>
+            <!-- Sessão: Dados Pessoais -->
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required />
+                <input type="text" id="nome" name="nome" required aria-required="true" />
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" required aria-required="true" />
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" required />
+                <input type="tel" id="telefone" name="telefone" required aria-required="true" />
 
                 <label for="usuario">Nome de usuário</label>
-                <input type="text" id="usuario" name="usuario" required />
+                <input type="text" id="usuario" name="usuario" required aria-required="true" />
             </fieldset>
 
+            <!-- Sessão: Rede de Apoio -->
             <fieldset>
                 <legend>Rede de Apoio</legend>
 
-                <label for="apoio-nome">nome</label>
-                <input type="text" id="apoio-nome" name="apoio-nome" required />
+                <label for="apoio-nome">Nome do contato</label>
+                <input type="text" id="apoio-nome" name="apoio-nome" required aria-required="true" />
 
                 <label for="apoio-telefone">Telefone do contato</label>
-                <input type="tel" id="apoio-telefone" name="apoio-telefone" required />
+                <input type="tel" id="apoio-telefone" name="apoio-telefone" required aria-required="true" />
 
                 <label for="apoio-relacao">Relação</label>
-                <select id="apoio-relacao" name="apoio-relacao" required>
+                <select id="apoio-relacao" name="apoio-relacao" required aria-required="true">
                     <option value="">Selecione...</option>
                     <option value="Amiga">Amiga</option>
                     <option value="Irmã">Irmã</option>
@@ -50,15 +59,32 @@
                 </select>
             </fieldset>
 
+            <!-- Botão para salvar as alterações no perfil -->
             <button type="submit" aria-label="Salvar alterações do perfil">Salvar Alterações</button>
         </form>
+
+        <!-- Botão para retornar à tela inicial -->
         <button onclick="voltarParaHome()" class="btn-voltar-home" aria-label="Voltar para a tela inicial">
             Voltar para a Home
         </button>
-
     </main>
 
+    <!-- Script da lógica de perfil -->
     <script src="../js/perfil.js"></script>
+
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active" aria-label="Ativar tradução em Libras"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

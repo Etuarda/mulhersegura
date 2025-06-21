@@ -2,17 +2,30 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Define a codificação de caracteres e responsividade -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da página -->
     <title>Calculadora</title>
+
+    <!-- Estilos globais e específicos da calculadora -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/calculadora.css" />
 </head>
 
 <body>
+    <!-- Container principal da calculadora -->
     <main class="calculadora-container">
-        <input type="text" id="tela" class="tela" readonly aria-label="Tela da calculadora" />
 
+        <!-- Tela de exibição dos cálculos-->
+
+        <div id="tela" class="tela" role="status" aria-live="polite" tabindex="0"
+            aria-label="Tela da calculadora. Mostra os cálculos em tempo real. Dê dois toques rápidos para voltar ao login."
+            ondblclick="verificarRedirecionamento()">
+        </div>
+
+        <!-- Conjunto de botões da calculadora -->
         <div class="botoes">
             <button onclick="limpar()">C</button>
             <button onclick="apagar()">⌫</button>
@@ -34,13 +47,29 @@
             <button onclick="inserir('3')">3</button>
             <button onclick="inserir('+')">+</button>
 
+            <!-- Botão zero ocupa dois espaços (CSS define largura) -->
             <button onclick="inserir('0')" class="zero">0</button>
             <button onclick="inserir('.')">.</button>
             <button onclick="calcular()">=</button>
         </div>
     </main>
 
+    <!-- Script principal com a lógica da calculadora -->
     <script src="../js/calculadora.js"></script>
+
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

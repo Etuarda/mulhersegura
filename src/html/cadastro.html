@@ -5,55 +5,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - App Seguro</title>
+
+    <!-- Estilos globais e específicos da página -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/cadastro.css" />
 </head>
 
 <body>
+    <!-- Container principal do conteúdo -->
     <main class="container">
+        <!-- Título da página -->
         <h1>Crie sua conta</h1>
 
+        <!-- Formulário de cadastro com acessibilidade -->
         <form id="form-cadastro" novalidate aria-describedby="mensagem-erro">
-            <!-- Grupo: Dados Pessoais -->
+
+            <!-- Seção: Dados Pessoais -->
             <fieldset>
                 <legend>Dados Pessoais</legend>
 
+                <!-- Nome completo da usuária -->
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required placeholder="Ex: Juliana" />
 
+                <!-- E-mail -->
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
 
+                <!-- Telefone -->
                 <label for="telefone">Telefone</label>
                 <input type="tel" id="telefone" name="telefone" required placeholder="(89)9 9999-9999" maxlength="11" />
 
+                <!-- Nome de usuário -->
                 <label for="usuario">Nome de usuário</label>
                 <input type="text" id="usuario" name="usuario" required placeholder="juliana28" />
 
+                <!-- Senha (campo protegido) -->
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" required minlength="6"
                     aria-describedby="mensagem-erro" />
 
+                <!-- Confirmação de senha -->
                 <label for="confirmar">Confirmar senha</label>
                 <input type="password" id="confirmar" name="confirmar" required minlength="6" />
 
+                <!-- Opção de mostrar senha -->
                 <div style="margin-top: 1rem;">
                     <input type="checkbox" id="ver-senha" />
                     <label for="ver-senha">Mostrar senha</label>
                 </div>
             </fieldset>
 
-            <!-- Grupo: Rede de Apoio -->
+            <!-- Seção: Rede de Apoio -->
             <fieldset>
                 <legend>Rede de Apoio</legend>
 
+                <!-- Nome do contato de apoio -->
                 <label for="apoio-nome">Nome do contato</label>
                 <input type="text" id="apoio-nome" name="apoio-nome" required placeholder="Ex: Ana Paula" />
 
+                <!-- Telefone do contato -->
                 <label for="apoio-telefone">Telefone do contato</label>
                 <input type="tel" id="apoio-telefone" name="apoio-telefone" required placeholder="(89)9 9999-9999"
                     maxlength="11" />
 
+                <!-- Relação com o contato -->
                 <label for="apoio-relacao">Relação</label>
                 <select id="apoio-relacao" name="apoio-relacao" required>
                     <option value="">Selecione...</option>
@@ -64,13 +80,32 @@
                     <option value="Outro">Outro</option>
                 </select>
             </fieldset>
+
+            <!-- Botão de envio do formulário -->
             <button type="submit" aria-label="Cadastrar nova conta com dados preenchidos">Cadastrar</button>
+
+            <!-- Mensagem de erro visível para leitores de tela -->
             <p class="mensagem-erro" id="mensagem-erro" aria-live="assertive"></p>
         </form>
-
     </main>
 
+    <!-- Script responsável pela lógica da página -->
     <script src="../js/cadastro.js"></script>
+
+    <!-- Plugin de acessibilidade em Libras VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        // Inicializa o plugin VLibras
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

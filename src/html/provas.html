@@ -2,27 +2,51 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Define codificação de caracteres e responsividade para dispositivos móveis -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título exibido na aba do navegador -->
     <title>Provas - App Seguro</title>
+
+    <!-- Estilos globais e específicos da tela de provas -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/provas.css" />
 </head>
 
 <body>
+    <!-- Container principal do conteúdo -->
     <main class="container">
         <h1>Provas Armazenadas</h1>
 
+        <!-- Lista de provas armazenadas, com suporte a leitores de tela para atualizações dinâmicas -->
         <section aria-live="polite">
             <ul id="lista-provas" class="lista-provas">
                 <li>Nenhuma prova armazenada ainda.</li>
             </ul>
         </section>
 
-        <button onclick="voltarParaHome()" class="btn-voltar">Voltar para a Home</button>
+        <!-- Botão de retorno à página inicial com rótulo acessível -->
+        <button onclick="voltarParaHome()" class="btn-voltar" aria-label="Voltar para a tela inicial">Voltar para a
+            Home</button>
     </main>
 
+    <!-- Script responsável por exibir as provas armazenadas -->
     <script src="../js/provas.js"></script>
+
+    <!-- Plugin de acessibilidade VLibras para tradução em Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active" aria-label="Ativar tradução em Libras"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

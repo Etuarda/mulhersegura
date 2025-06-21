@@ -2,29 +2,35 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Metadados essenciais para compatibilidade e responsividade -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título exibido na aba do navegador -->
     <title>Rotas Seguras - App Seguro</title>
+
+    <!-- Estilos globais e específicos da tela de rotas -->
     <link rel="stylesheet" href="../css/rotas.css" />
     <link rel="stylesheet" href="../css/global.css" />
 </head>
 
 <body>
+    <!-- Container principal da tela -->
     <main class="container">
         <h1>Rotas Seguras</h1>
 
-        <!-- Status dinâmico -->
+        <!-- Seção com status dinâmico de segurança de rota. aria-live permite que leitores de tela leiam atualizações -->
         <section aria-labelledby="status-rota" aria-live="polite">
             <p id="status-rota">Verificando sua rota atual...</p>
         </section>
 
-        <!-- Simulação de mapa -->
+        <!-- Simulação de mapa com rótulo acessível -->
         <section id="mapa" aria-label="Mapa de rota simulada">
             <p>📍 Você está aqui</p>
             <img src="../../assets/img/rota.png" alt="Ícone de Rotas Seguras" />
         </section>
 
-        <!-- Locais de apoio -->
+        <!-- Lista de locais de apoio próximos, agrupados semanticamente -->
         <fieldset>
             <legend>Locais de apoio próximos</legend>
             <ul>
@@ -34,12 +40,16 @@
             </ul>
         </fieldset>
 
-        <!-- Botões -->
-        <button onclick="verRotaMaisSegura()" aria-label="Exibir sugestão de rota mais segura">Ver Rota Mais
-            Segura</button>
-        <button onclick="voltarParaHome()" aria-label="Voltar para tela inicial">Voltar para a Home</button>
+        <!-- Botões de navegação com descrições acessíveis -->
+        <button onclick="verRotaMaisSegura()" aria-label="Exibir sugestão de rota mais segura">
+            Ver Rota Mais Segura
+        </button>
+        <button onclick="voltarParaHome()" aria-label="Voltar para a tela inicial">
+            Voltar para a Home
+        </button>
     </main>
 
+    <!-- Script JS com simulação de verificação de horário e sugestão de rota -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const status = document.getElementById("status-rota");
@@ -48,7 +58,7 @@
             if (hora >= 20 || hora < 6) {
                 status.textContent = "⚠️ Alerta: horário noturno. Recomenda-se evitar ruas desertas.";
             } else {
-                status.textContent = " Horário seguro. Priorize avenidas iluminadas e movimentadas.";
+                status.textContent = "Horário seguro. Priorize avenidas iluminadas e movimentadas.";
             }
         });
 
@@ -59,6 +69,20 @@
         function voltarParaHome() {
             window.location.href = "home.html";
         }
+    </script>
+
+    <!-- Plugin VLibras: acessibilidade em Libras para surdos -->
+    <div vw class="enabled">
+        <div vw-access-button class="active" aria-label="Ativar tradução em Libras"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 

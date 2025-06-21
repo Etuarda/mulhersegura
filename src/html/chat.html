@@ -2,37 +2,66 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Metadados essenciais para codificação e responsividade -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da aba do navegador -->
     <title>Conversa Segura - App Seguro</title>
+
+    <!-- Estilos específicos da tela de chat -->
     <link rel="stylesheet" href="../css/chat.css" />
 </head>
 
 <body>
+    <!-- Container principal do chat -->
     <main class="chat-container">
+        <!-- Cabeçalho do chat -->
         <header class="chat-header">
             <h1>Conversa Segura</h1>
         </header>
 
+        <!-- Área de exibição de mensagens com leitura dinâmica por leitores de tela -->
         <section class="chat-box" id="chat-box" aria-live="polite">
             <div class="mensagem-sistema">Olá! Como posso te ajudar hoje?</div>
         </section>
 
+        <!-- Campo de entrada e botão de envio com rótulos acessíveis -->
         <section class="chat-input">
             <input type="text" id="entrada-msg" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem" />
             <button onclick="enviarMensagem()" aria-label="Enviar mensagem">➤</button>
         </section>
 
+        <!-- Sugestões de mensagens rápidas para facilitar a interação -->
         <section class="sugestoes">
-            <button onclick="sugerirMensagem('Preciso de apoio emocional.')">💬 Apoio emocional</button>
-            <button onclick="sugerirMensagem('Como denunciar uma ameaça?')">💬 Denúncia</button>
-            <button onclick="sugerirMensagem('Quais meus direitos?')">💬 Direitos</button>
+            <button onclick="sugerirMensagem('Preciso de apoio emocional.')"
+                aria-label="Mensagem rápida: apoio emocional">💬 Apoio emocional</button>
+            <button onclick="sugerirMensagem('Como denunciar uma ameaça?')" aria-label="Mensagem rápida: denúncia">💬
+                Denúncia</button>
+            <button onclick="sugerirMensagem('Quais meus direitos?')" aria-label="Mensagem rápida: direitos">💬
+                Direitos</button>
         </section>
-        <!-- Botão de voltar para a home -->
-        <button onclick="voltarParaHome()" aria-label="Voltar para tela inicial">Voltar para a Home</button>
+
+        <!-- Botão de navegação com descrição acessível -->
+        <button onclick="voltarParaHome()" aria-label="Voltar para a tela inicial">Voltar para a Home</button>
     </main>
 
+    <!-- Script com a lógica do chat -->
     <script src="../js/chat.js"></script>
+
+    <!-- Plugin de acessibilidade VLibras: tradução para Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active" aria-label="Ativar tradução em Libras"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- Script oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
