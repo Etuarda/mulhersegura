@@ -24,20 +24,19 @@ O projeto surgiu a partir do reconhecimento de um problema social urgente: o alt
 
 Além da proteção individual, o sistema é projetado para, futuramente, fornecer dados anonimizados que possam auxiliar na criação de políticas públicas, segurança urbana e programas institucionais de proteção à mulher.
 
-## Estrutura do Projeto
+## Páginas principais
 
-```bash
-mulhersegura/
-├── assets/
-│   └── img/                # Imagens utilizadas nas interfaces
-├── src/
-│   ├── css/                # Estilos organizados por tela (ex: home.css, chat.css)
-│   ├── html/               # Páginas HTML (ex: cadastro.html, rotas.html, etc.)
-│   └── js/                 # Scripts JavaScript específicos de cada funcionalidade
-└── readme.md
-```
-
-Aqui está a seção reformatada em Markdown sem tabelas, utilizando listas e destaques:
+| Página           | Descrição                                 |
+| ---------------- | ----------------------------------------- |
+| calculadora.html | Entrada disfarçada (calculadora)          |
+| cadastro.html    | Formulário de cadastro e rede de apoio    |
+| login.html       | Tela de login (simulada com localStorage) |
+| home.html        | Painel de funcionalidades principais      |
+| chat.html        | Atendimento com IA simulada               |
+| provas.html      | Registro local de interações              |
+| rotas.html       | Verificação de segurança de trajeto       |
+| permissoes.html  | Termos de uso e privacidade               |
+| perfil.html      | Edição dos dados cadastrados              |
 
 ## Funcionalidades Simuladas
 
@@ -80,6 +79,28 @@ O sistema incentiva a construção comunitária de segurança através:
 - Da formação de mapas de risco colaborativos
 - Da geração de dados para ações preventivas
 - Do apoio mútuo entre usuárias
+
+
+## Paleta de Cores
+
+A paleta foi escolhida com base em estudos sobre psicologia das cores. O tom de rosa predominante foi adotado por seu efeito calmante e acolhedor, contribuindo para uma experiência visual segura e empática.
+
+## Estrutura do Projeto
+
+```bash
+mulhersegura/
+├── assets/
+│   └── img/                # Imagens utilizadas nas interfaces
+├── src/
+│   ├── css/                # Estilos organizados por tela (ex: home.css, chat.css)
+│   ├── html/               # Páginas HTML (ex: cadastro.html, rotas.html, etc.)
+│   └── js/                 # Scripts JavaScript específicos de cada funcionalidade
+└── readme.md
+```
+
+Aqui está a seção reformatada em Markdown sem tabelas, utilizando listas e destaques:
+
+
 ## Tecnologias Utilizadas
 
 * HTML5 semântico
@@ -92,33 +113,7 @@ O sistema incentiva a construção comunitária de segurança através:
 * Acessibilidade:
 
   * Plugin VLibras para tradução em Libras
-  * `aria-label`, `aria-live`, `tabindex` e navegação por teclado
 
-## Paleta de Cores
-
-A paleta foi escolhida com base em estudos sobre psicologia das cores. O tom de rosa predominante foi adotado por seu efeito calmante e acolhedor, contribuindo para uma experiência visual segura e empática.
-
-## Como executar localmente
-
-```bash
-git clone https://github.com/Etuarda/mulhersegura.git
-cd mulhersegura
-start index.html  # ou open index.html no macOS
-```
-
-## Páginas principais
-
-| Página           | Descrição                                 |
-| ---------------- | ----------------------------------------- |
-| calculadora.html | Entrada disfarçada (calculadora)          |
-| cadastro.html    | Formulário de cadastro e rede de apoio    |
-| login.html       | Tela de login (simulada com localStorage) |
-| home.html        | Painel de funcionalidades principais      |
-| chat.html        | Atendimento com IA simulada               |
-| provas.html      | Registro local de interações              |
-| rotas.html       | Verificação de segurança de trajeto       |
-| permissoes.html  | Termos de uso e privacidade               |
-| perfil.html      | Edição dos dados cadastrados              |
 
 ## Considerações finais
 
