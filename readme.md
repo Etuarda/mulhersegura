@@ -101,4 +101,10 @@ Este projeto está sob a licença MIT.
 
 ## Autoria
 
-Desenvolvido por Eduarda Silva Santos, estudante bolsista do ProUni em Análise e Desenvolvimento de Sistemas - PUCRS e desenvolvedora web fullstack em formação.
+O conceito original do app invisível surgiu de uma proposta apresentada por Letícia Camilo de Souza, com colaboração de Laura da Silva Reis e Julia Moraes Machado Velozo. Juntas, contribuíram para a construção da ideia base e esboço inicial da apresentação.
+
+A versão "Caminho Seguro" foi idealizada por Eduarda Silva Santos, que adaptou a proposta para abordar especificamente a segurança da mulher no trajeto e no trabalho, definiu a paleta de cores, implementou recursos de acessibilidade e desenvolveu integralmente todo o código-fonte do protótipo.
+
+O desenvolvimento técnico completo, incluindo estrutura HTML/CSS, lógica em JavaScript e integração de acessibilidade, foi realizado exclusivamente por Eduarda como parte do projeto apresentado no hackathon.
+
+Eduarda Silva Santos, estudante bolsista do ProUni em Análise e Desenvolvimento de Sistemas - PUCRS e desenvolvedora web fullstack em formação.
