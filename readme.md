@@ -2,7 +2,6 @@
 
 [![Status](https://img.shields.io/badge/status-protótipo-informational)](https://shields.io/)
 [![Licença](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
-[![Tecnologias](https://img.shields.io/badge/HTML5-CSS3-JS-blue)](https://developer.mozilla.org/)
 
 
 **Caminho Seguro** é um aplicativo web responsivo e sigiloso, desenvolvido como um protótipo funcional de uma solução voltada à segurança de mulheres em trajetos e ambientes de trabalho. Apesar de funcionar como um site estático, o projeto simula a experiência de um aplicativo mobile, com foco em usabilidade, acessibilidade, leveza e segurança.
@@ -40,15 +39,23 @@ mulhersegura/
 
 ## Funcionalidades Simuladas
 
-* Interface disfarçada (calculadora)
-* Botão de emergência (Volume + simulado)
-* Gravação secreta (Volume - simulado)
-* Chat com IA (respostas automatizadas)
-* Rotas seguras com geolocalização simulada
-* Cadastro com rede de apoio
-* Registro de provas localmente
-* Navegação offline simulada
+As funcionalidades foram pensadas para promover segurança, acolhimento e colaboração entre usuárias. Além de simular tecnologias como alertas e geolocalização, o app também incentiva o compartilhamento de experiências cotidianas entre mulheres.
 
+| Funcionalidade               | Descrição                                                                                                                                                     | Destaque                                                                 |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| **Interface disfarçada**      | Calculadora que serve como entrada secreta para o aplicativo                                                                                                | Proteção contra acesso não autorizado                                   |
+| **Botão de emergência**       | Acionado pela combinação de teclas Volume + (simulado)                                                                                                      | Resposta rápida em situações críticas                                   |
+| **Gravação secreta**          | Ativada pela combinação Volume - (simulado)                                                                                                                 | Coleta de evidências discreta                                           |
+| **Chat com IA**               | Sistema de respostas automatizadas para orientação e suporte                                                                                                | Acolhimento imediato 24/7                                               |
+| **Rotas seguras**             | Sistema de geolocalização simulada com:                                                                                                                     | **Colaborativo:**                                                       |
+|                               | - Feedback das usuárias sobre condições do trajeto                                                                                                          | - Mapeamento comunitário de riscos                                      |
+|                               | - Dados sobre movimentação, trânsito e percepção de segurança                                                                                               | - Ações preventivas baseadas em dados                                   |
+|                               | - Integração com relatos de violência para formar mapa de calor                                                                                             |                                                                         |
+| **Cadastro com rede de apoio** | Inclusão de contatos confiáveis para alertas automáticos                                                                                                    | Rede de proteção pessoal                                                |
+| **Registro de provas**        | Armazenamento local de:                                                                                                                                     | Preservação de evidências                                               |
+|                               | - Registros de áudio                                                                                                                                        | - Sem dependência de conexão                                            |
+|                               | - Relatos de incidentes                                                                                                                                     |                                                                         |
+                              |
 ## Tecnologias Utilizadas
 
 * HTML5 semântico
