@@ -30,12 +30,12 @@ Além da proteção individual, o sistema é projetado para, futuramente, fornec
 | ---------------- | ----------------------------------------- |
 | calculadora.html | Entrada disfarçada (calculadora)          |
 | cadastro.html    | Formulário de cadastro e rede de apoio    |
+| permissoes.html  | Termos de uso e privacidade               |
 | login.html       | Tela de login (simulada com localStorage) |
 | home.html        | Painel de funcionalidades principais      |
 | chat.html        | Atendimento com IA simulada               |
 | provas.html      | Registro local de interações              |
 | rotas.html       | Verificação de segurança de trajeto       |
-| permissoes.html  | Termos de uso e privacidade               |
 | perfil.html      | Edição dos dados cadastrados              |
 
 ## Funcionalidades Simuladas
