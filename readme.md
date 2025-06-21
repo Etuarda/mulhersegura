@@ -1,8 +1,9 @@
 # Caminho Seguro
 
-![Status](https://img.shields.io/badge/status-prot%C3%B3tipo-informational)
-![Licença](https://img.shields.io/badge/license-MIT-green)
-![Tecnologias](https://img.shields.io/badge/HTML5-CSS3-JS-blue)
+[![Status](https://img.shields.io/badge/status-protótipo-informational)](https://shields.io/)
+[![Licença](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
+[![Tecnologias](https://img.shields.io/badge/HTML5-CSS3-JS-blue)](https://developer.mozilla.org/)
+
 
 **Caminho Seguro** é um aplicativo web responsivo e sigiloso, desenvolvido como um protótipo funcional de uma solução voltada à segurança de mulheres em trajetos e ambientes de trabalho. Apesar de funcionar como um site estático, o projeto simula a experiência de um aplicativo mobile, com foco em usabilidade, acessibilidade, leveza e segurança.
 
