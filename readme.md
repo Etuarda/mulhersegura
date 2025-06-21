@@ -37,25 +37,49 @@ mulhersegura/
 └── readme.md
 ```
 
+Aqui está a seção reformatada em Markdown sem tabelas, utilizando listas e destaques:
+
 ## Funcionalidades Simuladas
 
 As funcionalidades foram pensadas para promover segurança, acolhimento e colaboração entre usuárias. Além de simular tecnologias como alertas e geolocalização, o app também incentiva o compartilhamento de experiências cotidianas entre mulheres.
 
-| Funcionalidade               | Descrição                                                                                                                                                     | Destaque                                                                 |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| **Interface disfarçada**      | Calculadora que serve como entrada secreta para o aplicativo                                                                                                | Proteção contra acesso não autorizado                                   |
-| **Botão de emergência**       | Acionado pela combinação de teclas Volume + (simulado)                                                                                                      | Resposta rápida em situações críticas                                   |
-| **Gravação secreta**          | Ativada pela combinação Volume - (simulado)                                                                                                                 | Coleta de evidências discreta                                           |
-| **Chat com IA**               | Sistema de respostas automatizadas para orientação e suporte                                                                                                | Acolhimento imediato 24/7                                               |
-| **Rotas seguras**             | Sistema de geolocalização simulada com:                                                                                                                     | **Colaborativo:**                                                       |
-|                               | - Feedback das usuárias sobre condições do trajeto                                                                                                          | - Mapeamento comunitário de riscos                                      |
-|                               | - Dados sobre movimentação, trânsito e percepção de segurança                                                                                               | - Ações preventivas baseadas em dados                                   |
-|                               | - Integração com relatos de violência para formar mapa de calor                                                                                             |                                                                         |
-| **Cadastro com rede de apoio** | Inclusão de contatos confiáveis para alertas automáticos                                                                                                    | Rede de proteção pessoal                                                |
-| **Registro de provas**        | Armazenamento local de:                                                                                                                                     | Preservação de evidências                                               |
-|                               | - Registros de áudio                                                                                                                                        | - Sem dependência de conexão                                            |
-|                               | - Relatos de incidentes                                                                                                                                     |                                                                         |
-                              |
+### Principais Recursos
+
+- **Interface disfarçada (calculadora)**  
+  Acesso secreto ao aplicativo através de uma calculadora funcional, proporcionando discrição e proteção contra acesso não autorizado.
+
+- **Botão de emergência (Volume + simulado)**  
+  Acionamento rápido através da combinação de teclas simulada, permitindo resposta imediata em situações críticas.
+
+- **Gravação secreta (Volume - simulado)**  
+  Ativação discreta de gravações de áudio para coleta de evidências, simulada pela combinação de teclas.
+
+- **Chat com IA (respostas automatizadas)**  
+  Sistema de atendimento automatizado que oferece orientação e suporte emocional 24 horas por dia.
+
+- **Rotas seguras com geolocalização simulada**  
+  Sistema colaborativo que permite:
+  - Compartilhamento de feedback sobre trajetos
+  - Informações sobre movimentação e trânsito
+  - Nível de segurança percebido no percurso
+  - Integração com relatos de violência para formação de mapa de calor
+  *Destaque:* Promove ações preventivas baseadas em dados já existentes ou comunitários.
+
+- **Cadastro com rede de apoio**  
+  Inclusão de contatos confiáveis para alertas automáticos, criando uma rede de proteção pessoal.
+
+- **Registro de provas localmente**  
+  Armazenamento seguro no dispositivo de:
+  - Gravações de áudio
+  - Relatos de incidentes
+  *Vantagem:* Funcionalidade independente de conexão com a internet.
+
+### Características Colaborativas
+O sistema incentiva a construção comunitária de segurança através:
+- Do compartilhamento anônimo de experiências
+- Da formação de mapas de risco colaborativos
+- Da geração de dados para ações preventivas
+- Do apoio mútuo entre usuárias
 ## Tecnologias Utilizadas
 
 * HTML5 semântico
